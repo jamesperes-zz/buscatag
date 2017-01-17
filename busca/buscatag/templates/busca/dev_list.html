@@ -1,0 +1,31 @@
+{% extends 'busca/base.html' %}
+{% block title %} -  Desenvolvedores {% endblock %}
+{% block body %} -  Desenvolvedores {% endblock %}
+{% block content %}
+
+
+    <div class="tags">
+  <table class="table table-responsive">
+<thead>
+  <tr>
+    <th>Nome</th>
+    <th>Projeto</th>
+
+  </tr>
+</thead>
+</div>
+<tbody>
+
+{% for dev in devs %}
+
+        <tr>
+          <td> <a href="/pessoa/{{ dev.id }}">{{ dev.nome }}</a></td>
+          <td><a href="/pro/"> {{dev.projeto}}</a></td>
+
+        </tr>
+
+{% endfor %}
+    </tbody>
+</div>
+</table>
+{% endblock content %}

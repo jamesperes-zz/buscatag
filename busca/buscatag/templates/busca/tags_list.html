@@ -1,0 +1,18 @@
+{% extends 'busca/base.html' %}
+{% block content %}
+
+
+    <div class="tags">
+        <div class="end">
+            <p align="left">
+
+{% for tag in tags %}
+            <a href="/tag/{{ tag.id }}"><img src='{{ tag.imagem.url }}'width=13% height=13%></a>
+
+{% endfor %}
+
+</p>
+</div>
+    </div>
+
+{% endblock content %}

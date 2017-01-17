@@ -1,0 +1,33 @@
+{% extends 'busca/base.html' %}
+{% block title %} -  Lista {% endblock %}
+{% block body %} -  Lista {% endblock %}
+{% block content %}
+
+
+    <div class="tags">
+  <table class="table table-responsive">
+<thead>
+  <tr>
+    <th>Nome</th>
+    <th>Linguagem </th>
+    <th>Rating</th>
+    <th>Observação </th>
+  </tr>
+</thead>
+</div>
+<tbody>
+
+{% for tag in tags %}
+
+        <tr>
+          <td>  <a href="/pessoa/{{ tag.pessoa.id }}">{{ tag.pessoa.nome }}</a></td>
+          <td> {{tag.tag}}</td>
+          <td>  {{tag.rating}}</td>
+          <td> {{tag.obs}}</td>
+        </tr>
+
+{% endfor %}
+    </tbody>
+</div>
+</table>
+{% endblock content %}
